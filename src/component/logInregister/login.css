@@ -1,0 +1,125 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../images//bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity here */
+    z-index: 1;
+  }
+  
+  /* Content inside the container */
+  .login > * {
+    position: relative; /* Ensure content appears above the overlay */
+    z-index: 2;
+  }
+  
+  .logo-container {
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    width: 300px;
+    height: auto;
+  }
+  .loginTitle{
+    margin-top: 5px;
+  }
+  .login-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    background-color: #fff;
+    border-radius: 45px 45px 0px 0px;
+    box-shadow: 0px 0px 10px 2px #000;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .email_passBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  .login-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #1f7140;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 35px;
+    width: 60vw;
+  }
+  
+  .login-button:hover {
+    background-color: #014d5d;
+  }
+  
+  .sign-up-container {
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .forgotPassBox p {
+    color: #016c81;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .forgotPassBox p:hover {
+    text-decoration: underline;
+  }
+  .passwordWrapper {
+    position: relative;
+    width: 85%;
+  }
+  .email_passBox input,
+  .passwordWrapper input {
+    width: 85%;
+    padding: 12px 40px 12px 12px; /* Padding for the eye icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+  }
+  .passwordWrapper input {
+    width: 100%;
+  }
+  .email_passBox input:focus,
+  .passwordWrapper input:focus {
+    outline: none;
+    border-color: #04a89b;
+    box-shadow: 0 0 5px rgba(4, 168, 155, 0.3);
+  }
+  
+  .eyeIcon {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+  }
+  
+  .eyeIcon:hover {
+    color: #04a89b;
+  }

@@ -9,6 +9,7 @@ import Loader from "./component/loader/loader";
 import "./App.css"
 import SelectLanguage from "./component/starter/starterLanguage";
 import GetStarted from "./component/starter/getStarted";
+import Login from "./component/logInregister/login";
 
 function App() {
   // const dispatch = useDispatch();
@@ -36,6 +37,7 @@ function App() {
       <Routes>
         <Route exact path="/" Component={SelectLanguage} />
         <Route exact path="/getStarted" Component={GetStarted} />
+        <Route exact path="/login" Component={Login} />
         {/* <Route
           exact
           path="/account"

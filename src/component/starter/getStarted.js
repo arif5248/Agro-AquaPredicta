@@ -1,11 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import MetaData from "../metaData/metaData";
 import "./getStarted.css";
 import logo from "../../images/logo.jpeg"; // Import your logo image
 
 const GetStarted = () => {
-  const { t } = useTranslation(); // Access translations
+    const navigate = useNavigate();
+    const { t } = useTranslation(); // Access translations
 
   return (
     <div className="get_started">
@@ -18,7 +20,7 @@ const GetStarted = () => {
 
       {/* Get Started button */}
       <div className="content-container">
-        <button className="get-started-button">
+        <button onClick ={ ()=>{navigate("/login")}} className="get-started-button">
           {t("get_started.button")}
         </button>
 
