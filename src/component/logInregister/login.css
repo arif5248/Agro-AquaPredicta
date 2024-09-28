@@ -96,10 +96,16 @@
     width: 85%;
     padding: 12px 40px 12px 12px; /* Padding for the eye icon */
     font-size: 16px;
-    border: 1px solid #ccc;
     border-radius: 20px;
     transition: all 0.3s ease;
     margin-bottom: 10px;
+    background-color: #4EA873 !important;
+    border: 2px solid #4EA873;
+    color: #fff;
+  }
+  .email_passBox input::placeholder,
+  .passwordWrapper input::placeholder {
+    color: #fff;
   }
   .passwordWrapper input {
     width: 100%;
@@ -107,7 +113,7 @@
   .email_passBox input:focus,
   .passwordWrapper input:focus {
     outline: none;
-    border-color: #04a89b;
+    border-color: #1f7140;
     box-shadow: 0 0 5px rgba(4, 168, 155, 0.3);
   }
   
@@ -117,7 +123,7 @@
     top: 40%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #777;
+    color: #fff;
   }
   
   .eyeIcon:hover {
