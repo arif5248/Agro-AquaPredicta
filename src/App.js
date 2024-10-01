@@ -4,12 +4,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { useSelector } from "react-redux";
 // import { useDispatch } from "react-redux";
 // import ProtectedRoute from "./component/ProtectedRoute";
-import Loader from "./component/loader/loader";
 
 import "./App.css"
 import SelectLanguage from "./component/starter/starterLanguage";
 import GetStarted from "./component/starter/getStarted";
 import Login from "./component/logInregister/login";
+import DashBoard from "./component/dashBoard/dashBoard";
+import InitialLoader from "./component/loader/initialLoader";
 
 function App() {
   // const dispatch = useDispatch();
@@ -17,7 +18,7 @@ function App() {
   const [appLoading, setAppLoading] = useState(true);
   setTimeout(() => {
     setAppLoading(false)
-  }, 2000);
+  }, 2000000);
   useEffect(() => {
     WebFont.load({
       google: {
@@ -29,7 +30,7 @@ function App() {
   });
 
   if (appLoading) {
-    return <Loader />; // Show a loader until fetchLoadUser is complete
+    return <InitialLoader />; // Show a loader until fetchLoadUser is complete
   }
 
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route exact path="/" Component={SelectLanguage} />
         <Route exact path="/getStarted" Component={GetStarted} />
         <Route exact path="/login" Component={Login} />
+        <Route exact path="/dashboard" Component={DashBoard} />
         {/* <Route
           exact
           path="/account"

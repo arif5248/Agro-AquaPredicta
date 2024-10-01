@@ -12,6 +12,9 @@
         "email_placeholder" : "Enter your Email",
         "pass_placeholder" : "Enter your Password",
         "forgot_pass": "Forgot Password?"
+    },
+    "dashBoard":{
+        "title": "Dash Board"
     }
 }
   
