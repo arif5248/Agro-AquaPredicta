@@ -66,7 +66,7 @@
   }
   
   .language-item.selected {
-    background-color: rgb(88 127 5);;
+    background-color: rgb(88 127 5);
     color: white;
     border: 2px solid #f0f0f0;
   }
@@ -80,20 +80,20 @@
   
   /* Floating Next Button (Left Arrow) */
   .next-button {
-    position: fixed;
-    bottom: 30px;
     /* right: 30px; */
-    background-color: #28a745;
+    background-color: rgb(113 163 8);
     color: white;
     padding: 10px 20px;
     font-size: 24px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
   }
-  
+  .next-button:focus{
+    background-color: rgb(88 127 5);
+  }
   .next-button:hover {
     background-color: #218838;
   }
