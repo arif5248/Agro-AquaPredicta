@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import MetaData from "../metaData/metaData";
 import "./getStarted.css";
-import logo from "../../images/logo.jpeg"; // Import your logo image
+import logo from "../../images/logo.png"; // Import your logo image
 
 const GetStarted = () => {
     const navigate = useNavigate();

@@ -12,7 +12,7 @@ code {
     monospace;
 } */
 #root {
-  background-color: #14350d;
+  background: linear-gradient(180deg, rgb(113 163 8) 10%, rgb(193 221 45) 32%);
   position: relative;
   height: calc(100vh - env(safe-area-inset-top));
   padding-bottom: env(safe-area-inset-bottom);

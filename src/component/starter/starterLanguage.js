@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import MetaData from "../metaData/metaData";
+import logo from "../../images/logo.png"
 import "./starterLanguage.css";
 
 const SelectLanguage = () => {
@@ -38,35 +39,39 @@ const SelectLanguage = () => {
   return (
     <div className="language-container">
       <MetaData title="Select Language" />
-      <div className="language-header">
-        <h1>Select your language</h1>
-        <input
-          type="text"
-          className="search-bar"
-          placeholder="Search your language"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <div className="logoContetnInLanguage">
+        <img src={logo} alt="App Logo" className="logo" />
       </div>
+      <div>
+        <div className="language-header">
+          <h1>Select your language</h1>
+          <input
+            type="text"
+            className="search-bar"
+            placeholder="Search your language"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
 
-      <div className="language-list">
-        {filteredLanguages.length > 0 ? (
-          filteredLanguages.map((language) => (
-            <div
-              key={language.code}
-              className={`language-item ${
-                selectedLanguage.label === language.label ? "selected" : ""
-              }`}
-              onClick={() => handleLanguageSelect(language)}
-            >
-              {language.label}
-            </div>
-          ))
-        ) : (
-          <div className="no-results">No language found</div>
-        )}
+        <div className="language-list">
+          {filteredLanguages.length > 0 ? (
+            filteredLanguages.map((language) => (
+              <div
+                key={language.code}
+                className={`language-item ${
+                  selectedLanguage.label === language.label ? "selected" : ""
+                }`}
+                onClick={() => handleLanguageSelect(language)}
+              >
+                {language.label}
+              </div>
+            ))
+          ) : (
+            <div className="no-results">No language found</div>
+          )}
+        </div>
       </div>
-
       {selectedLanguage && (
         <button className="next-button" onClick={handleNext}>
            {t("next")} &#x2192;

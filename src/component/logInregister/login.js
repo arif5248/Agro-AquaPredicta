@@ -2,7 +2,7 @@ import React, {Fragment, useState} from "react";
 import { useTranslation } from "react-i18next";
 import MetaData from "../metaData/metaData";
 import "./login.css";
-import logo from "../../images/logo.jpeg";
+import logo from "../../images/logo.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 import { useNavigate } from "react-router-dom";
 import Loader from "../loader/loader";

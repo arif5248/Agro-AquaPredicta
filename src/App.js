@@ -18,7 +18,7 @@ function App() {
   const [appLoading, setAppLoading] = useState(true);
   setTimeout(() => {
     setAppLoading(false)
-  }, 2000000);
+  }, 3000);
   useEffect(() => {
     WebFont.load({
       google: {
