@@ -39,7 +39,7 @@ const HealthStatus = () => {
             </div>
             <div className="healthContentBox">
                 {healthStatusData.map((data)=>(
-                    <div className="healthContentWrapper">
+                    <div key={data.title} className="healthContentWrapper">
                         <img className="mainImage" src={data.mainImage} alt={data.title}/>
                         <h5 className="healthTitle">{data.title}</h5>
                         <img className="imageIcon" src={data.iconImage} alt={data.title}/>
