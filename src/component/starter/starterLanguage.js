@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import MetaData from "../metaData/metaData";
@@ -10,6 +10,15 @@ const SelectLanguage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if user data exists in local storage
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      // If user data exists, navigate to dashboard
+      navigate("/dashboard");
+    }
+  }, [navigate]);
 
   const languages = [
     { code: "en", label: "English" },

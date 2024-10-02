@@ -14,7 +14,8 @@
         "forgot_pass": "Forgot Password?"
     },
     "dashBoard":{
-        "title": "Dash Board"
+        "title": "Dash Board",
+        "welcome": "Welcome"
     }
 }
   

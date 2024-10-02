@@ -25,6 +25,7 @@ const Login = () => {
       
     //   login dispatch here
       console.log("Successfully Logged In");
+      localStorage.setItem("user", {email, password})
       navigate("/dashboard"); 
     } catch (error) {
       console.error("Error Log In:", error);

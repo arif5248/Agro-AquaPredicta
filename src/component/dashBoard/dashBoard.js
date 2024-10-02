@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import MetaData from "../metaData/metaData";
 import Loader from "../loader/loader"
+import userAvatar from "../../images/user.jpg"
 import "./dashBoard.css";
+import Header from "../layout/header";
 
 const DashBoard = () => {
     const navigate = useNavigate();
@@ -13,27 +15,27 @@ const DashBoard = () => {
 
     return (
         <Fragment>
-          <MetaData title={t("login.title")} />
+          <MetaData title={t("dashBoard.title")} />
           {loading ? (<Loader/>) :(
             <Fragment>
-                  <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-                  
+                <div className="dashMainSection">
+                  <Header/>
+                  {/* <div className="welcomeSection">
+                      <div className="textContent">
+                        <p>{t("dashBoard.welcome")}</p>
+                        <h3>Mojammel Miya</h3>
+                      </div>
+                      <div className="userIcon">
+                        <div className="imageWrapper">
+                          <img src={userAvatar} alt="User Avatar"/>
+                        </div>
+                      </div>
+                  </div> */}
 
 
 
-      {/* <ThreeDTransparentProgress
-        title="Optimal"
-        value={60}
-        colors={['#66ff66', '#33cc33']} // Transparent green tones
-        label="18 Fields"
-      />
-      <ThreeDTransparentProgress
-        title="High"
-        value={90}
-        colors={['#6666ff', '#3333cc']} // Transparent blue tones
-        label="42 Fields"
-      /> */}
-    </div>
+   
+              </div>
             </Fragment>
           )}
         </Fragment>

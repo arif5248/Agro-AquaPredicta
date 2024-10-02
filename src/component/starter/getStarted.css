@@ -19,13 +19,13 @@
   }
   
   .logo-container {
-    margin-bottom: 30px;
+    margin-top: 80px;
   }
   
-  .logo {
+  /* .logo {
     width: 300px;
     height: auto;
-  }
+  } */
   
   .content-container {
     width: 100%;
