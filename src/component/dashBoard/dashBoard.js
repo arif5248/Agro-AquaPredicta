@@ -7,6 +7,7 @@ import userAvatar from "../../images/user.jpg"
 import "./dashBoard.css";
 import Header from "../layout/header";
 import Weather from "./weather";
+import HealthStatus from "./healthStatus";
 
 const DashBoard = () => {
     const navigate = useNavigate();
@@ -22,6 +23,7 @@ const DashBoard = () => {
                 <div className="dashMainSection">
                   <Header/>
                   <Weather/>
+                  <HealthStatus />
                 </div>
             </Fragment>
           )}
