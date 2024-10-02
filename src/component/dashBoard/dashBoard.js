@@ -6,6 +6,7 @@ import Loader from "../loader/loader"
 import userAvatar from "../../images/user.jpg"
 import "./dashBoard.css";
 import Header from "../layout/header";
+import Weather from "./weather";
 
 const DashBoard = () => {
     const navigate = useNavigate();
@@ -20,22 +21,8 @@ const DashBoard = () => {
             <Fragment>
                 <div className="dashMainSection">
                   <Header/>
-                  {/* <div className="welcomeSection">
-                      <div className="textContent">
-                        <p>{t("dashBoard.welcome")}</p>
-                        <h3>Mojammel Miya</h3>
-                      </div>
-                      <div className="userIcon">
-                        <div className="imageWrapper">
-                          <img src={userAvatar} alt="User Avatar"/>
-                        </div>
-                      </div>
-                  </div> */}
-
-
-
-   
-              </div>
+                  <Weather/>
+                </div>
             </Fragment>
           )}
         </Fragment>

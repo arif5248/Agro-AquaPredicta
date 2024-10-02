@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0px 10px;
+    box-shadow: 0px 0px 5px 4px rgba(187, 226, 105, 1);
 }
 .logoBox{
     display: flex;
