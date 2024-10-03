@@ -8,6 +8,7 @@ import "./dashBoard.css";
 import Header from "../layout/header";
 import Weather from "./weather";
 import HealthStatus from "./healthStatus";
+import SoilMoisture from "./soilMoisture";
 
 const DashBoard = () => {
     const navigate = useNavigate();
@@ -24,6 +25,7 @@ const DashBoard = () => {
                   <Header/>
                   <Weather/>
                   <HealthStatus />
+                  <SoilMoisture />
                 </div>
             </Fragment>
           )}
