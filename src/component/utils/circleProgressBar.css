@@ -19,7 +19,7 @@
 .circleProgressBar > .circle::before{
   content: '';
   position: absolute;
-  inset: 15px;
+  inset: 10%;
   border-radius: 50%;
   background: #222;
   opacity: 0.8;
@@ -27,8 +27,8 @@
 .circleProgressBar > .circle::after{
   content: '';
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 40%;
+  height: 40%;
   background: #333;
   border: 15px solid #4d4c51;
   border-radius: 50%;
@@ -39,5 +39,5 @@
   color: #fff;
   z-index: 10;
   line-height: 1em;
-  font-size: 2em;
+  font-size: 100%;
 }
