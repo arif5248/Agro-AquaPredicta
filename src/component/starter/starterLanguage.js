@@ -11,14 +11,14 @@ const SelectLanguage = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Check if user data exists in local storage
-    const userData = localStorage.getItem("user");
-    if (userData) {
-      // If user data exists, navigate to dashboard
-      navigate("/dashboard");
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   // Check if user data exists in local storage
+  //   const userData = localStorage.getItem("user");
+  //   if (userData) {
+  //     // If user data exists, navigate to dashboard
+  //     navigate("/dashboard");
+  //   }
+  // }, [navigate]);
 
   const languages = [
     { code: "en", label: "English" },
