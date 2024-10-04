@@ -30,7 +30,7 @@ const Weather = () => {
         { title: "Precipitation", imgSrc: precipitation, value: "0mm" },
     ];
 
-    const currentWeatherType = "rainy"; // Current weather condition
+    const currentWeatherType = "cloudy"; // Current weather condition
 
     const sunriseTime = 6; // 6 AM
     const sunsetTime = 18; // 6 PM

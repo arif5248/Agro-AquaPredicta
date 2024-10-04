@@ -5,6 +5,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  overflow-y: auto;
 }
 .welcomeSection{
   background-color: rgb(88 127 5);

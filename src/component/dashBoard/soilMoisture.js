@@ -62,7 +62,7 @@ const SoilMoisture = () => {
   };
 
   return (
-    <div className="soilMoistureSection">
+    <div className="soilMoistureSection" onClick={()=>{navigate("/soil")}}>
       <div className="soilMoistureHeading">
         <h3>Soil Moisture</h3>
         <div>

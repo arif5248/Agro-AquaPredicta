@@ -6,6 +6,7 @@ import GetStarted from "./component/starter/getStarted";
 import Login from "./component/logInregister/login";
 import DashBoard from "./component/dashBoard/dashBoard";
 import InitialLoader from "./component/loader/initialLoader";
+import SoilMoistureDetails from "./component/soilMoisture/soilMoisture";
 
 function App() {
   const [appLoading, setAppLoading] = useState(true);
@@ -37,6 +38,7 @@ function App() {
         <Route exact path="/getStarted" Component={GetStarted} />
         <Route exact path="/login" Component={Login} />
         <Route exact path="/dashboard" Component={DashBoard} />
+        <Route exact path="/soil" Component={SoilMoistureDetails} />
       </Routes>
     </Router>
   );

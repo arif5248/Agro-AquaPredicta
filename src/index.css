@@ -12,8 +12,10 @@ code {
     monospace;
 } */
 #root {
-  background: linear-gradient(180deg, rgb(113 163 8) 10%, rgb(193 221 45) 32%);
+  background: linear-gradient(180deg, rgba(187,226,105,1) 0%, rgba(241,255,170,1) 35%);
   position: relative;
   height: calc(100vh - env(safe-area-inset-top));
   padding-bottom: env(safe-area-inset-bottom);
+  display: flex;
+  flex-direction: column;
 }

@@ -21,8 +21,9 @@ const DashBoard = () => {
           <MetaData title={t("dashBoard.title")} />
           {loading ? (<Loader/>) :(
             <Fragment>
+              <Header/>
                 <div className="dashMainSection">
-                  <Header/>
+                  
                   <Weather/>
                   <HealthStatus />
                   <SoilMoisture />
