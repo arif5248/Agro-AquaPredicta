@@ -2,14 +2,12 @@ import React from 'react';
 import { PieChart, Pie, Tooltip, Cell } from 'recharts';
 
 // Define colors for the pie slices
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#A28FEE', '#FC6464', '#82CA9D'];
+const COLORS = [];
 
 const MyPieChart = ( apiData ) => {
   // Create the data structure for the pie chart
-  const data = apiData.content.predictions.soilMoisture.map((moisture, index) => ({
-    name: `Day ${index + 1}`,
-    value: moisture,
-  }));
+  const data = apiData.content
+  console.log(data)
 
   return (
     <PieChart width={400} height={400}>
@@ -25,7 +23,8 @@ const MyPieChart = ( apiData ) => {
       >
         {/* Render cells with different colors */}
         {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          <Cell key={`cell-${index}`} fill={entry.color} />
+          // <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
       <Tooltip />

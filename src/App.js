@@ -7,6 +7,7 @@ import Login from "./component/logInregister/login";
 import DashBoard from "./component/dashBoard/dashBoard";
 import InitialLoader from "./component/loader/initialLoader";
 import SoilMoistureDetails from "./component/soilMoisture/soilMoisture";
+import SignUp from "./component/logInregister/signUp";
 
 function App() {
   const [appLoading, setAppLoading] = useState(true);
@@ -37,6 +38,7 @@ function App() {
         <Route exact path="/" Component={SelectLanguage} />
         <Route exact path="/getStarted" Component={GetStarted} />
         <Route exact path="/login" Component={Login} />
+        <Route exact path="/sign-up" Component={SignUp} />
         <Route exact path="/dashboard" Component={DashBoard} />
         <Route exact path="/soil" Component={SoilMoistureDetails} />
       </Routes>

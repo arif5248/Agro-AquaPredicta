@@ -13,6 +13,14 @@
         "pass_placeholder" : "Enter your Password",
         "forgot_pass": "Forgot Password?"
     },
+    "signUp": {
+        "title": "Sign Up",
+        "button": "Register",
+        "userName" : "Enter your user name",
+        "email_placeholder" : "Enter your Email",
+        "pass_placeholder" : "Enter your Password",
+        "confirmPass_placeholder" : "Confirm your Password"
+    },
     "dashBoard":{
         "title": "Dash Board",
         "welcome": "Welcome"

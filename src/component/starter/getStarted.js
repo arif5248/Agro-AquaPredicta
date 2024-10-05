@@ -26,11 +26,11 @@ const GetStarted = () => {
 
         {/* Sign-up link */}
         <div className="sign-up-container">
-          <p>
+          <p style={{color: "#000"}}>
             {t("get_started.no_account")}{" "}
-            <a href="/sign-up" className="sign-up-link">
+            <span onClick ={ ()=>{navigate("/sign-up")}} className="sign-up-link">
               {t("get_started.sign_up")}
-            </a>
+            </span>
           </p>
         </div>
       </div>

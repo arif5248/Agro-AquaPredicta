@@ -43,8 +43,8 @@ const SelectLanguage = () => {
     } else {
       alert(t("select_language"));
     }
-  };
-
+  }; 
+  
   return (
     <div className="language-container">
       <MetaData title="Select Language" />
