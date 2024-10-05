@@ -33,7 +33,13 @@
     background-color: #fff;
     border-radius: 45px 45px 0px 0px;
     box-shadow: 0px 0px 10px 2px #000;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .signUpForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
   .email_passBox {
@@ -82,9 +88,9 @@
     width: 85%;
     padding: 12px 40px 12px 12px; /* Padding for the eye icon */
     font-size: 16px;
-    border-radius: 20px;
+    border-radius: 15px;
     transition: all 0.3s ease;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: rgb(116 166 10 / 87%) !important;
     border: 2px solid rgb(88 127 5);
     color: #fff;

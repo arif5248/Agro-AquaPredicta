@@ -13,6 +13,14 @@
         "email_placeholder" : "আপনার ইমেইল লিখুন",
         "pass_placeholder" : "আপনার পাসওয়ার্ড লিখুন",
         "forgot_pass": "পাসওয়ার্ড ভুলে গেছেন?"
+    },
+    "signUp": {
+        "title": "সাইন আপ",
+        "button": "রেজিষ্ট্রার",
+        "userName" : "আপনার নাম টাইপ করুন",
+        "email_placeholder" : "আপনার ইমেইল টাইপ করুন",
+        "pass_placeholder" : "আপনার পাসওয়ার্ড টাইপ করুন",
+        "confirmPass_placeholder" : "আপনার পাসওয়ার্ড নিশ্চিত করুন"
     }
 }
   
