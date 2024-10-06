@@ -28,7 +28,7 @@
   
   .logoBox > .logoBoxWrapper > img:first-child {
     width: 45px;
-    height: fit-content;
+    height: auto;
     padding-right: 10px;
     /* animation: logoFadeIn 1s ease-in-out; */
   }
