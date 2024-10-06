@@ -35,7 +35,7 @@
   
   .logoBox > .logoBoxWrapper > img:last-child {
     width: 75px;
-    height: fit-content;
+    height: auto;
     /* animation: logoFadeIn 1s ease-in-out 0.2s; */
   }
   
