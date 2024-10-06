@@ -21,7 +21,7 @@
   position: absolute;
   inset: 10%;
   border-radius: 50%;
-  background: #222;
+  background: #22222299;
   opacity: 0.8;
 }
 .circleProgressBar > .circle::after{

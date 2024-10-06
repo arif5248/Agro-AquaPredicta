@@ -28,7 +28,7 @@ const CircleProgressBar = ({ content }) => {
 
       // Access and modify the circle's background using ref
       if (circleRef.current) {
-        circleRef.current.style.background = `conic-gradient(${color} ${degree}%, #222 0%)`;
+        circleRef.current.style.background = `conic-gradient(${color} ${degree}%, rgb(34 34 34 / 67%) 0%)`;
       }
     }, 50);
 
@@ -37,8 +37,8 @@ const CircleProgressBar = ({ content }) => {
 
   return (
     <div className='circleProgressBar'>
-      <div ref={circleRef} className='circle'> {/* Attach ref here */}
-        <h2 className='number'>{progress}%</h2> {/* Use the animated progress */}
+      <div ref={circleRef} className='circle'> 
+        <h2 className='number'>{progress}%</h2> 
       </div>
     </div>
   );
