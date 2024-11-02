@@ -77,7 +77,7 @@ const Weather = () => {
     }, [sunriseTime, sunsetTime]);
 
     return (
-        <div className="weatherSection">
+        <div className="weatherSection" onClick={()=>{navigate("/weatherDetails")}}>
             <div className="weatherLeft">
                 <div className="addressDateAndTemp">
                     <div className="addressAndDate">

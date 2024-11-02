@@ -5,3 +5,55 @@
     flex: 1 1 auto;
     overflow-y: auto;
 }
+.weatherDetailsHeading{
+    margin: 0;
+    font-size: 20px;
+    color: #627635;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.weatherTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px 10px; /* Adds spacing between rows */
+}
+
+.weatherTable tr {
+    /* background-color: #f9f9f9; */
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Ensure rounded corners display properly */
+}
+
+.weatherTable td {
+    /* padding: 10px 0px; */
+    text-align: center;
+    border: none; /* Removes default cell borders */
+    width: 25%;
+    text-align: left;
+    font-size: 14px;
+}
+.weatherTable td:nth-child(2){
+    width: 50%;
+}
+.weatherTable td:first-child{
+    padding-left: 5px;
+}
+.weatherTable td:last-child{
+    padding-right: 5px;
+}
+
+.weatherTable img {
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.weatherTable tbody tr {
+    transition: transform 0.2s ease; /* Adds a slight hover effect */
+}
+
+.weatherTable tbody tr:hover {
+    transform: translateY(-3px); /* Row lifts on hover */
+}

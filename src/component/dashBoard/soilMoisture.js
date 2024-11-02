@@ -62,7 +62,7 @@ const SoilMoisture = () => {
   };
 
   return (
-    <div className="soilMoistureSection" onClick={()=>{navigate("/soil")}}>
+    <div className="soilMoistureSection">
       <div className="soilMoistureHeading">
         <h3>Soil Moisture</h3>
         <div>
@@ -77,7 +77,7 @@ const SoilMoisture = () => {
       </div>
       <div className="soilMoistureContentBox">
         {soilMoistureData.map((data) => (
-          <div key={data.title} className="progressContent">
+          <div key={data.title} className="progressContent"  onClick={()=>{navigate("/soil")}}>
             <h5 className="fieldNum">{data.totalFields} Fields</h5>
             <CircleProgressBar content={data} />
             <h4>{data.title}</h4>
