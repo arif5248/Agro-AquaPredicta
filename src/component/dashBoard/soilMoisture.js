@@ -6,57 +6,41 @@ import CircleProgressBar from "../utils/circleProgressBar";
 
 const SoilMoisture = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation(); // Access translations
+  const { t } = useTranslation();
 
-  // State to hold selected date
   const [selectedDate, setSelectedDate] = useState("");
 
-  // Get today's date in "YYYY-MM-DD" format
+  // Function to get today's date in "YYYY-MM-DD" format
   const getTodayDate = () => {
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, "0"); // Months are 0-based
-    const dd = String(today.getDate()).padStart(2, "0");
-    return `${yyyy}-${mm}-${dd}`;
+    return new Date().toISOString().split("T")[0]; // Standardized format
   };
-  const dateConverter = (data)=>{
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const dateString = data;
-        const datePart = dateString.split(' ')[0];
-        const dateObj = new Date(datePart);
-        let day = dateObj.getDate();
-        day = day < 10 ? '0'+day : day
-        
-        const monthIndex = dateObj.getMonth();
-        const year = dateObj.getFullYear();
 
-        const formattedDate = day + '/' + monthNames[monthIndex] + '/' + year;
-        return formattedDate
-    }
+  // Convert date to "DD/Mon/YYYY" format
+  const dateConverter = (dateString) => {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const dateObj = new Date(dateString);
+
+    if (isNaN(dateObj)) return dateString; // Return as-is if invalid
+
+    const day = String(dateObj.getDate()).padStart(2, "0");
+    const month = monthNames[dateObj.getMonth()];
+    const year = dateObj.getFullYear();
+
+    return `${day}/${month}/${year}`;
+  };
+
   useEffect(() => {
-    // Set default date as today
+    // Set default date as today's formatted date
     setSelectedDate(dateConverter(getTodayDate()));
   }, []);
 
   const soilMoistureData = [
-    {
-      totalFields: 25,
-      avgPercentage: 75,
-      title: "High",
-    },
-    {
-      totalFields: 8,
-      avgPercentage: 55,
-      title: "Optimal",
-    },
-    {
-      totalFields: 45,
-      avgPercentage: 25,
-      title: "Low",
-    },
+    { totalFields: 25, avgPercentage: 75, title: "High" },
+    { totalFields: 8, avgPercentage: 55, title: "Optimal" },
+    { totalFields: 45, avgPercentage: 25, title: "Low" },
   ];
 
-  // Function to handle date input change
+  // Handle date input change
   const handleDateChange = (e) => {
     setSelectedDate(dateConverter(e.target.value));
   };
@@ -66,18 +50,20 @@ const SoilMoisture = () => {
       <div className="soilMoistureHeading">
         <h3>Soil Moisture</h3>
         <div>
-          {/* Display "Today" if today's date is selected */}
-          <label htmlFor='dateInput' className="dateSpan">{selectedDate === getTodayDate() ? "Today" : selectedDate}</label>
-          <input id="dateInput"
+          <label htmlFor="dateInput" className="dateSpan">
+            {selectedDate === dateConverter(getTodayDate()) ? "Today" : selectedDate}
+          </label>
+          <input
+            id="dateInput"
             type="date"
-            value={selectedDate}
+            value={getTodayDate() === selectedDate ? getTodayDate() : selectedDate}
             onChange={handleDateChange}
           />
         </div>
       </div>
       <div className="soilMoistureContentBox">
         {soilMoistureData.map((data) => (
-          <div key={data.title} className="progressContent"  onClick={()=>{navigate("/soil")}}>
+          <div key={data.title} className="progressContent" onClick={() => navigate("/soil")}>
             <h5 className="fieldNum">{data.totalFields} Fields</h5>
             <CircleProgressBar content={data} />
             <h4>{data.title}</h4>
