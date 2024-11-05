@@ -1,0 +1,65 @@
+
+.cropHealthDetailsSection{
+    background: linear-gradient(180deg, rgba(187,226,105,1) 0%, rgba(241,255,170,1) 35%);
+    height: 100vh;
+    width: 100vw;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+.cropHealthDetailsHeadingSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+.cropHealthDetailsHeading{
+    margin: 0;
+    font-size: 20px;
+    color: #627635;
+    text-align: center;
+}
+.copsHealthSummarySection{
+    padding: 0px 5px;
+}
+.copsHealthSummarySection .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000;
+    margin: 10px 0px;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.copsHealthSummarySection .item .itemLeft{
+    display: flex;
+    align-items: center;
+}
+.copsHealthSummarySection .item .itemLeft p,
+.copsHealthSummarySection .item .itemRight p{
+    margin: 0;
+}
+.copsHealthSummarySection .item .itemLeft img{
+    width: 30px;
+}
+.copsHealthSummarySection .item .itemLeft{
+    width: 60%;
+}
+.copsHealthSummarySection .item .itemRight{
+    text-align: center;
+    width: 40%;
+}
+.copsHealthSummarySection .item .itemRight .des{
+    font-size: 12px;
+}
+
+.cropHealthChartSection{
+    border: 1px solid #000;
+    margin: 15px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 1px #000000b3;
+}
+.cropHealthChartSection h3{
+    margin: 0;
+    text-align: center;
+    margin-top: 5px;
+}
