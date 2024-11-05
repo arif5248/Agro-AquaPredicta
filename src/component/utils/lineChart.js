@@ -7,7 +7,7 @@ const MyLineChart = ( {content} ) => {
 
   return (
     <LineChart width={600} height={300} data={data}>
-      <CartesianGrid stroke="#ccc" />
+      <CartesianGrid stroke={strokeColor} />
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
