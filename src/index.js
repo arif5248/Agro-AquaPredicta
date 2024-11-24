@@ -9,7 +9,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css"
 
 
+const setAppHeight = () => {
+  document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+};
 
+window.addEventListener('resize', setAppHeight);
+setAppHeight();
 // Create a root container using createRoot
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
